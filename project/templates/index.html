@@ -1,0 +1,192 @@
+{% extends 'layout.html' %}
+{% block body%}
+<div class="container-fluid">
+  {% for mess in get_flashed_messages() %}
+  
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">x</span>
+    </button>
+    {{mess}}
+  </div>
+ 
+  {% endfor %}
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{{url_for('static', filename='intel.jpg')}}"  alt="intel" >
+    </div>
+    <div class="carousel-item">
+      <img src="{{url_for('static', filename='amd.jpg')}}" alt="amd">
+    </div>
+    <div class="carousel-item">
+      <img src="{{url_for('static', filename='customjpg.jpg')}}" alt="custom">
+    </div>
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+<div class="low" >
+  <br>
+  <h3  style="color: rgba(10, 1, 9, 0.836);font-weight: bolder;" >Low Budget:</h3>
+  <br>
+  <div class="card-deck">
+    <div class="card">
+     <img class="card-img-top"src="{{url_for('static', filename='25.jpg')}}"alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title" style="font-weight: bolder;">₹25,000</h5>
+        <p class="card-text" style="font-size: 20px; font-weight: bolder;">Powered by AMD Ryzen 3 3400G and 8GB of Ram, this is a fps killer.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-base font-weight-bold">Available.</small>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top"src="{{url_for('static', filename='30.jpg')}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title" style="font-weight: bolder;">₹30,000</h5>
+        <p class="card-text" style="font-size: 20px; font-weight: bolder;">Powered by Intel Core i3-9100F and GTX 1650 4GB, this is a beast.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-base font-weight-bold">Available.</small>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top"src="{{url_for('static', filename='36.jpg')}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title" style="font-weight: bolder;">₹36,000</h5>
+        <p class="card-text" style="font-size: 20px; font-weight: bolder;">Powered by Intel Core i3-9100F and GTX 1660 6GB, this is a bang for buck deal.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-base font-weight-bold">Available.</small>
+      </div>
+  </div>
+
+</div>
+
+</div>
+<div class="mid" >
+  <br>
+  <h3 style="color: rgba(10, 1, 9, 0.836);font-weight: bolder;">Mid Budget:</h3>
+  <br>
+  <div class="card-deck">
+    <div class="card">
+      <img class="card-img-top"src="{{url_for('static', filename='41r.jpg')}}"alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title" style="font-weight: bolder;">₹41,000</h5>
+        <p class="card-text" style="font-size: 20px; font-weight: bolder;">Powered by Intel Core i3-9100F and GTX 1660 6GB, this is a bang for buck deal.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-base font-weight-bold">Available.</small>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top"src="{{url_for('static', filename='36.jpg')}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title" style="font-weight: bolder;">₹47,000</h5>
+        <p class="card-text" style="font-size: 20px; font-weight: bolder;">Powered by AMD Ryzen 5 3500, 16GB of Ram and GTX 1660 6GB.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-base font-weight-bold">Available.</small>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top"src="{{url_for('static', filename='55.jpg')}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title" style="font-weight: bolder;">₹55,000</h5>
+        <p class="card-text" style="font-size: 20px; font-weight: bolder;">Powered by AMD Ryzen 5 3500, 16GB of Ram and GTX 1660 super 6GB.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-base font-weight-bold">Available.</small>
+      </div>
+  </div>
+
+</div>
+
+</div>
+<div class="extreme" >
+  <br>
+  <h3 style="color: rgba(10, 1, 9, 0.836); font-weight: bolder;">Extreme Budget:</h3>
+  <br>
+  <div class="card-deck">
+    <div class="card">
+      <img class="card-img-top"src="{{url_for('static', filename='60r.jpg')}}"alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title" style="font-weight: bolder;">₹62,000</h5>
+        <p class="card-text" style="font-size: 20px; font-weight: bolder;">Powered by Intel Core i5 9400F and RTX 2060 6GB, this is a bang for buck deal.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-base font-weight-bold">Available.</small>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top"src="{{url_for('static', filename='90jpg.jpg')}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title" style="font-weight: bolder;">₹79,000</h5>
+        <p class="card-text" style="font-size: 20px; font-weight: bolder;">Powered by AMD Ryzen 5 3600 and RX 5700. This is a fps killer.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-base font-weight-bold">Available.</small>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top"src="{{url_for('static', filename='90jpg.jpg')}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title" style="font-weight: bolder;">₹89,000</h5>
+        <p class="card-text" style="font-size: 20px; font-weight: bolder;">Powered by AMD Ryzen 5 3600 and RX 5700XT. This is a powerful machine.</p>
+      </div>
+      <div class="card-footer ">
+        <small class="text-base font-weight-bold">Available.</small>
+      </div>
+  </div>
+</div>
+</div>
+<br><br>
+</div>
+
+<style>
+ 
+  .text-base{
+    font-weight: bolder;
+    color: white;
+  }
+  .card{
+    
+    background-color: black;
+  }
+ 
+  .card-text, .card-title{
+    color: black;
+    background-color: white;
+  }
+
+  /* Make the image fully responsive */
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+  .carousel-indicators li {
+    margin-left: 20px;
+    margin-right: 20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+  </style>
+{% endblock %}

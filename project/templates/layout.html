@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PC BUILDERS</title>
+        
+        <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    </head>
+    <body style="background-color: grey;  height:100%;" >
+        <nav class="navbar  navbar-expand-lg ">
+            <a class="navbar-brand" >PC BUILDER</a>
+            <button class="navbar-toggler  custom-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon "></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/">HOME <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="/about">ABOUT</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/contact">CONTACT US</a>
+                  </li>
+                
+                
+              </ul>
+              <form class="form-inline my-2 my-lg-0" action="/" method="POST">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" name="search" aria-label="Search">
+                <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">SEARCH</button>
+              </form>
+            </div>
+          </nav>
+   
+    
+    {% block body %}{% endblock %}
+    <br><br>
+    <!-- Footer -->
+<footer class="page-footer font-small blue">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+     PCBUILDERS
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+  
+ <style>
+   .custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(226, 250, 9, 0.932)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: rgba(226, 250, 9, 0.932);
+} 
+   .page-footer {
+     
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+  
+   .navbar{
+     background-color: black;
+     color: yellow;
+   }
+   .nav-link{
+     color: white;
+   }
+   .nav-link:hover{
+    
+     color: yellow;
+   }
+   
+ </style>
+
+</body>
+ </html>
